@@ -19,7 +19,7 @@ function BGI() {
 
         const config = {
             container_id: "graph-container-casic",
-            server_url: "neo4j://3.208.1.4:7687",
+            server_url: "bolt://3.208.1.4:7687",
             server_user: "neo4j",
             server_password: "i-0e331822501bc6d84",
             labels: {
