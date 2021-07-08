@@ -1,0 +1,47 @@
+.graph-and-loading-icon-wrapper {
+    position: relative;
+}
+
+.loading-icon-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 280px;
+}
+
+#graph-container, #graph-container-casic {
+    width: 90vw;
+    height: 75vh;
+    margin: auto;
+    background-color: #f5f5f5;
+    border: 3px solid lightgrey;
+    border-radius: 1em;
+}
+
+.button-bar {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.button-bar .MuiButton-root,
+.button-bar .MuiFormControl-root {
+    margin: 0 1em;
+}
+
+.button-bar .MuiFormLabel-root,
+.button-bar .MuiFormLabel-root.Mui-focused {
+    color: gray;
+}
+
+.button-bar .MuiInputBase-input {
+    color: #f5f5f5;
+}
+
+.button-bar .MuiOutlinedInput-notchedOutline {
+    border-color: lightgrey;
+}
+
+.button-bar .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.button-bar .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+}
