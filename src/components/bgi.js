@@ -19,7 +19,7 @@ function BGI() {
 
         const config = {
             container_id: "graph-container",
-            server_url: "wss://54.224.51.117:7687",
+            server_url: "https://54.224.51.117:7687",
             server_user: "neo4j",
             server_password: "i-08bb780d2ee5c5ec9",
             labels: {
