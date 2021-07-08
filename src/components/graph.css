@@ -8,7 +8,7 @@
     top: 280px;
 }
 
-#graph-container, #graph-container-casic {
+#graph-container, #graph-container-casic, #graph-container-casc {
     width: 90vw;
     height: 75vh;
     margin: auto;

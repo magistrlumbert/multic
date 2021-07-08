@@ -8,20 +8,20 @@ import { Button, CircularProgress, TextField } from '@material-ui/core';
 
 const CompletionEvent = 'completed';
 
-function CASIC() {
+function CASC() {
 
     const [loading, setLoading] = useState(false);
     const [nodesLimit, setNodesLimit] = useState(10);
 
     const handleLoadGraph = () => {
-        document.getElementById('graph-container-casic').innerHTML = '';
+        document.getElementById('graph-container-casc').innerHTML = '';
         setLoading(true);
 
         const config = {
-            container_id: "graph-container-casic",
-            server_url: "bolt://3.208.1.4:7687",
+            container_id: "graph-container-casc",
+            server_url: "bolt://34.239.140.111",
             server_user: "neo4j",
-            server_password: "i-0e331822501bc6d84",
+            server_password: "i-0cd55b5744e56cfcc",
             labels: {
                 "Character": {
                     "caption": "name",
@@ -66,10 +66,10 @@ function CASIC() {
                 <div className="loading-icon-wrapper">
                     {loading && <CircularProgress size={100} />}
                 </div>
-                <div id="graph-container-casic"></div>
+                <div id="graph-container-casc"></div>
             </div>
         </>
     );
 }
 
-export default CASIC
+export default CASC
