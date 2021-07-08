@@ -35,7 +35,9 @@ function BGI() {
                     "caption": false
                 }
             },
-            initial_cypher: `MATCH (n)-[r:FILED]->(m) RETURN n,r,m LIMIT ${nodesLimit}`
+            initial_cypher: `MATCH (n)-[r:FILED]->(m) RETURN n,r,m LIMIT ${nodesLimit}`,
+            encrypted: "ENCRYPTION_ON",
+
         };
 
         const graphContainer = new NeoVis.default(config);
