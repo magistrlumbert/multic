@@ -38,7 +38,7 @@ function BGI() {
             initial_cypher: `MATCH (n)-[r:FILED]->(m) RETURN n,r,m LIMIT ${nodesLimit}`,
             console_debug: true,
             encrypted: "ENCRYPTION_ON",
-            trust: "TRUST_ALL_CERTIFICATES"
+            trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
 
         };
 

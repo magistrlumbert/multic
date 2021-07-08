@@ -19,7 +19,7 @@ function BGI() {
 
         const config = {
             container_id: "graph-container",
-            server_url: "bolt//54.224.51.117:7687",
+            server_url: "bolt://54.224.51.117:7687",
             server_user: "neo4j",
             server_password: "i-08bb780d2ee5c5ec9",
             labels: {
@@ -38,7 +38,7 @@ function BGI() {
             initial_cypher: `MATCH (n)-[r:FILED]->(m) RETURN n,r,m LIMIT ${nodesLimit}`,
             console_debug: true,
             encrypted: "ENCRYPTION_ON",
-            trust: "TRUST_ALL_CERTIFICATES"
+            trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
         };
 
         const graphContainer = new NeoVis.default(config);
