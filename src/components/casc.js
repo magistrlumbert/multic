@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import * as NeoVis from 'neovis.js'
 
-import * as NeoVis from 'neovis.js';
+import './graph.css'
 
-import './graph.css';
+import { Button, CircularProgress, TextField, TextareaAutosize } from '@material-ui/core'
 
-import { Button, CircularProgress, TextField } from '@material-ui/core';
-
-const CompletionEvent = 'completed';
+const CompletionEvent = 'completed'
 
 function CASC() {
 
-    const [loading, setLoading] = useState(false);
-    const [nodesLimit, setNodesLimit] = useState(10);
+    const [loading, setLoading] = useState(false)
+    const [nodesLimit, setNodesLimit] = useState(10)
+    const [initial_cypher, setQuery] = useState('MATCH (n)-[r]->(m) RETURN n, r, m')
 
     const handleLoadGraph = () => {
         document.getElementById('graph-container-casc').innerHTML = '';
@@ -35,23 +35,24 @@ function CASC() {
                     "caption": false
                 }
             },
-            initial_cypher: `MATCH (n)-[r:FILED]->(m) RETURN n,r,m LIMIT ${nodesLimit}`,
+            initial_cypher: `${initial_cypher} LIMIT ${nodesLimit}`,
             console_debug: true,
             encrypted: "ENCRYPTION_ON",
             trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
 
-        };
+        }
 
-        const graphContainer = new NeoVis.default(config);
+        const graphContainer = new NeoVis.default(config)
         graphContainer.registerOnEvent(CompletionEvent, () => {
-            setLoading(false);
+            setLoading(false)
         });
-        graphContainer.render();
+        graphContainer.render()
     };
 
     return (
         <>
             <aside className="button-bar">
+                <p><TextareaAutosize onChange={e => {setQuery(e.target.value)}} aria-label="empty textarea" placeholder="Type cypher query here" /></p>
                 <Button variant="contained" onClick={handleLoadGraph}>Load graph (limit {nodesLimit})</Button>
                 <TextField
                     id="nodes-limit"

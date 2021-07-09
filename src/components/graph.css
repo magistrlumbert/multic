@@ -16,32 +16,3 @@
     border: 3px solid lightgrey;
     border-radius: 1em;
 }
-
-.button-bar {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-}
-
-.button-bar .MuiButton-root,
-.button-bar .MuiFormControl-root {
-    margin: 0 1em;
-}
-
-.button-bar .MuiFormLabel-root,
-.button-bar .MuiFormLabel-root.Mui-focused {
-    color: gray;
-}
-
-.button-bar .MuiInputBase-input {
-    color: #f5f5f5;
-}
-
-.button-bar .MuiOutlinedInput-notchedOutline {
-    border-color: lightgrey;
-}
-
-.button-bar .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
-.button-bar .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: white;
-}
