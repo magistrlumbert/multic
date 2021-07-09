@@ -18,10 +18,10 @@ function BGI() {
         setLoading(true);
 
         const config = {
+            server_url: process.env.REACT_APP_NEO4J_URL_BGI,
+            server_user: process.env.REACT_APP_NEO4J_USER,
+            server_password: process.env.REACT_APP_NEO4J_PASSWORD_BGI,
             container_id: "graph-container",
-            server_url: "bolt://54.224.51.117:7687",
-            server_user: "neo4j",
-            server_password: "i-08bb780d2ee5c5ec9",
             labels: {
                 "Character": {
                     "caption": "name",

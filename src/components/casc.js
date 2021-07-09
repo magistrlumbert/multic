@@ -19,9 +19,9 @@ function CASC() {
 
         const config = {
             container_id: "graph-container-casc",
-            server_url: "bolt://34.239.140.111",
-            server_user: "neo4j",
-            server_password: "i-0cd55b5744e56cfcc",
+            server_url: process.env.REACT_APP_NEO4J_URL_CASC,
+            server_user: process.env.REACT_APP_NEO4J_USER,
+            server_password: process.env.REACT_APP_NEO4J_PASSWORD_CASC,
             labels: {
                 "Character": {
                     "caption": "name",
