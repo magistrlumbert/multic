@@ -29,6 +29,7 @@ function BGI() {
         console.log(fields)
         for (const [key, value] of Object.entries(nodes)) {
             data = [...data, value]
+            console.log(key)
         }
 
         saveAsCsv({ data, fields, filename })
@@ -49,6 +50,7 @@ function BGI() {
         console.log(fields)
         for (const [key, value] of Object.entries(edges)) {
             data = [...data, value]
+            console.log(key)
         }
 
         console.log(data)
